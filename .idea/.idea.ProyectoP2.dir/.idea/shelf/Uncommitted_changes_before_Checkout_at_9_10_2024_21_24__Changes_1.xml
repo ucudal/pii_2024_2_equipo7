@@ -1,0 +1,29 @@
+<changelist name="Uncommitted_changes_before_Checkout_at_9_10_2024_21_24_[Changes]1" date="1728519915582" recycled="true" deleted="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/.idea.ProyectoP2.dir/.idea/shelf/Uncommitted_changes_before_Checkout_at_9_10_2024_21_24_[Changes]1/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before Checkout at 9/10/2024 21:24 [Changes]" />
+  <binary>
+    <option name="BEFORE_PATH" value="Program/obj/project.nuget.cache" />
+    <option name="AFTER_PATH" value="Program/obj/project.nuget.cache" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/.idea.ProyectoP2.dir/.idea/shelf/Uncommitted_changes_before_Checkout_at_9_10_2024_21_24_[Changes]1/project.nuget.cache" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="Library/obj/Debug/net8.0/Library.assets.cache" />
+    <option name="AFTER_PATH" value="Library/obj/Debug/net8.0/Library.assets.cache" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/.idea.ProyectoP2.dir/.idea/shelf/Uncommitted_changes_before_Checkout_at_9_10_2024_21_24_[Changes]1/Library.assets.cache" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="Program/obj/Debug/net8.0/Program.assets.cache" />
+    <option name="AFTER_PATH" value="Program/obj/Debug/net8.0/Program.assets.cache" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/.idea.ProyectoP2.dir/.idea/shelf/Uncommitted_changes_before_Checkout_at_9_10_2024_21_24_[Changes]1/Program.assets.cache" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="Library/obj/Debug/net8.0/Library.AssemblyInfoInputs.cache" />
+    <option name="AFTER_PATH" value="Library/obj/Debug/net8.0/Library.AssemblyInfoInputs.cache" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/.idea.ProyectoP2.dir/.idea/shelf/Uncommitted_changes_before_Checkout_at_9_10_2024_21_24_[Changes]1/Library.AssemblyInfoInputs.cache" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="Program/obj/Debug/net8.0/Program.AssemblyInfoInputs.cache" />
+    <option name="AFTER_PATH" value="Program/obj/Debug/net8.0/Program.AssemblyInfoInputs.cache" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/.idea.ProyectoP2.dir/.idea/shelf/Uncommitted_changes_before_Checkout_at_9_10_2024_21_24_[Changes]1/Program.AssemblyInfoInputs.cache" />
+  </binary>
+</changelist>
