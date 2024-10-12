@@ -13,6 +13,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{004BB41C-1EDD-4178-B362-5257ADE233B6}"
 	ProjectSection(SolutionItems) = preProject
 		docs\Tarjetas CRC.svg = docs\Tarjetas CRC.svg
+		docs\Diagrama 1.svg = docs\Diagrama 1.svg
 	EndProjectSection
 EndProject
 Global
