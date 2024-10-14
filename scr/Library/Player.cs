@@ -8,11 +8,11 @@ public class Player
     private Dictionary<int, IAttack> atkList;
     public Dictionary<int, IAttack> AtkList { get; set; }
     
-    private List<IPokemon> pokemonsList;
-    public List<IPokemon> PokemonsList { get; set; }
+    private List<PokemonBase> pokemonsList;
+    public List<PokemonBase> PokemonsList { get; set; }
     
-    private IPokemon activePokemon;
-    public IPokemon ActivePokemon { get; set; }
+    private PokemonBase activePokemon;
+    public PokemonBase ActivePokemon { get; set; }
     
     private double pokemonHealth;
     public double PokemonHealth { get; set; }
@@ -26,7 +26,7 @@ public class Player
 
     public void CambiarPokemon(string nombre)
     {
-        foreach (IPokemon VARIABLE in pokemonsList)
+        foreach (PokemonBase VARIABLE in pokemonsList)
         {
             if (VARIABLE.Name == nombre)
             {
@@ -42,7 +42,7 @@ public class Player
     public bool EstaVivo()
     {
         int pokemonMuerto = 0;
-        foreach (IPokemon VARIABLE in pokemonsList)
+        foreach (PokemonBase VARIABLE in pokemonsList)
         {
             if (VARIABLE.PS == 0)
             {
@@ -63,7 +63,7 @@ public class Player
     public Player(string nombre)
     {
         Name = nombre;
-        PokemonsList = new List<IPokemon>();
+        PokemonsList = new List<PokemonBase>();
         ActivePokemon = null;
         PokemonHealth = ActivePokemon.PS;
         AtkList = ActivePokemon.Attacks;
