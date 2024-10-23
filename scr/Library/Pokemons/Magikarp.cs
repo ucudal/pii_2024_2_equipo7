@@ -24,7 +24,7 @@ public class Magikarp : PokemonBase
         };
         this.Types = new List<Type>()
         {
-            {TypeTable.GetType("agua")}
+            {TypeTable.GetType("Agua")}
         };
     }
 }

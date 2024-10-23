@@ -29,9 +29,9 @@ public class PokemonBase: IPokemon
     public Dictionary<int, IAttack> Attacks { get; set; }
 
 
-    public void UsarAtaque(IAttack attack, IPokemon pokemon)
+    public void UsarAtaque(IAttack attack, IPokemon objetive)
     {
-        pokemon.RecibirDaño(DamageCalculator(attack, pokemon));
+        objetive.RecibirDaño(DamageCalculator(attack, objetive));
     }
 
     public void RecibirDaño(double Damage)
@@ -66,7 +66,7 @@ public class PokemonBase: IPokemon
         double totaldaño;
         double dañostats;
 
-        if (attack.TypeOfAttack == TypeAttack.Physical)
+        if (attack.TypeOfAttack == TypeAttack.Fisico)
         {
             dañostats = (((0.2 * this.Lvl + 1) * this.Atk * pot) / (25 * objective.Def)) + 2;
             totaldaño = (0.01 * stab * (effectiveness) * variacion * dañostats);

@@ -3,6 +3,7 @@ using Project2;
 public static class TypeTable
 {
     private static List<Type> types = new List<Type>();
+    public static List<Type> Types { get; private set; }
 
     static TypeTable()
     {
@@ -64,6 +65,9 @@ public static class TypeTable
         roca.AddEffectiveness("Roca",1.0);
         roca.AddEffectiveness("Electrico",1.0);
         types.Add(roca);
+
+        var normal = new Type("Normal");
+        types.Add(normal);
     }
 
     public static Type GetType(string name)
