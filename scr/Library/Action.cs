@@ -1,4 +1,4 @@
-namespace Library;
+namespace Project2;
 
 using System;
 using System.Collections.Generic;
@@ -19,6 +19,7 @@ public class Action
         {
             new Action("Atacar", 1),
             new Action("Cambiar", 2),
+            new Action("Usar Objeto", 2)
         };
     }
     public string Name

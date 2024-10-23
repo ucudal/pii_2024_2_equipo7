@@ -1,48 +1,59 @@
-namespace Library;
+using System.Runtime.CompilerServices;
+
+namespace Project2;
 
 public class Player
 {
     private string name;
     public string Name { get; set; }
     
-    private Dictionary<int, IAttack> atkList;
-    public Dictionary<int, IAttack> AtkList { get; set; }
+    public Dictionary<int, IAttack> AtkList
+    {
+        get { return this.ActivePokemon.Attacks; } 
+        set { }
+    }
     
-    private List<PokemonBase> pokemonsList;
-    public List<PokemonBase> PokemonsList { get; set; }
+    private List<IPokemon> pokemonsList = new List<IPokemon>();
+    public List<IPokemon> PokemonsList { get; set; }
     
-    private PokemonBase activePokemon;
-    public PokemonBase ActivePokemon { get; set; }
+    private List<IItem> itemList;
+    public List<IItem> ItemList { get; set; }
     
-    private double pokemonHealth;
-    public double PokemonHealth { get; set; }
-    
+    private IPokemon activePokemon;
+    public IPokemon ActivePokemon { get; set; }
+
+    public double PokemonHealth {
+        get { return this.ActivePokemon.PS; } 
+        set { }
+    }
+
     private IAttack ataqueElegido;
     public IAttack AtaqueElegido { get; set; }
     
     private Action accionElegida;
     public Action AccionElegida { get; set; }
     
+    private IItem objetoElegido;
+    public IItem ObjetoElegido { get; set; }
+    
+    private IPokemon pokemonElegido;
+    public IPokemon PokemonElegido { get; set; }
+    
 
-    public void CambiarPokemon(string nombre)
+    public void CambiarPokemon(IPokemon pokemon)
     {
-        foreach (PokemonBase VARIABLE in pokemonsList)
+        if (this.pokemonsList.Contains(pokemon))
         {
-            if (VARIABLE.Name == nombre)
-            {
-                activePokemon = VARIABLE;
-            }
-            else
-            {
-                Console.WriteLine("No tienes ese pokemon");
-            }
+            this.ActivePokemon = pokemon;
         }
+
+        throw new Exception("No tienes este pokemon");
     }
 
     public bool EstaVivo()
     {
         int pokemonMuerto = 0;
-        foreach (PokemonBase VARIABLE in pokemonsList)
+        foreach (IPokemon VARIABLE in pokemonsList)
         {
             if (VARIABLE.PS == 0)
             {
@@ -57,16 +68,18 @@ public class Player
 
         return true;
     }
-    
-    
+
+    public void UsarObjeto(IItem item, IPokemon pokemon)
+    {
+        item.Effect(pokemon);
+        this.ItemList.Remove(item);
+    }
 
     public Player(string nombre)
     {
         Name = nombre;
-        PokemonsList = new List<PokemonBase>();
+        PokemonsList = new List<IPokemon>();
         ActivePokemon = null;
-        PokemonHealth = ActivePokemon.PS;
-        AtkList = ActivePokemon.Attacks;
         //Turno=
     }
 }

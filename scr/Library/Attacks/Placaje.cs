@@ -1,4 +1,6 @@
-namespace Library;
+using Library;
+
+namespace Project2;
 
 public class Placaje : IAttack
 {
