@@ -74,8 +74,11 @@ public class Logic
             jugador.AccionElegida = posibleacciones[0]; // Agrega una acción de atacar
         }
         else if (input == 2)
+        {
             PreguntarPorCambio(jugador);
             jugador.AccionElegida = posibleacciones[1]; // Agrega una acción de cambiar Pokémon
+        }
+            
         else
             throw new ArgumentOutOfRangeException("Acción inválida. Debe ser 1 o 2.");
     }

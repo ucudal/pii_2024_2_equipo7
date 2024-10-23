@@ -8,19 +8,19 @@
     "net8.0": []
   },
   "packageFolders": {
-    "C:\\Users\\emanu\\.nuget\\packages\\": {}
+    "C:\\Users\\Jessica Mora\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\emanu\\OneDrive\\Documents\\Programacion2\\pii_2024_2_equipo7\\scr\\Library\\Library.csproj",
+      "projectUniqueName": "C:\\Users\\Jessica Mora\\OneDrive\\Escritorio\\pii_2024_2_equipo7\\scr\\Library\\Library.csproj",
       "projectName": "Library",
-      "projectPath": "C:\\Users\\emanu\\OneDrive\\Documents\\Programacion2\\pii_2024_2_equipo7\\scr\\Library\\Library.csproj",
-      "packagesPath": "C:\\Users\\emanu\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\emanu\\OneDrive\\Documents\\Programacion2\\pii_2024_2_equipo7\\scr\\Library\\obj\\",
+      "projectPath": "C:\\Users\\Jessica Mora\\OneDrive\\Escritorio\\pii_2024_2_equipo7\\scr\\Library\\Library.csproj",
+      "packagesPath": "C:\\Users\\Jessica Mora\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Jessica Mora\\OneDrive\\Escritorio\\pii_2024_2_equipo7\\scr\\Library\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\emanu\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Jessica Mora\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -59,7 +59,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.201/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
