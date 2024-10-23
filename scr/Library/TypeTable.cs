@@ -1,5 +1,5 @@
 namespace Library;
-
+using Project2;
 public static class TypeTable
 {
     private static List<Type> types = new List<Type>();
@@ -11,7 +11,7 @@ public static class TypeTable
 
     private static void InicializarTipos()
     {
-        var fuego = new Type("Fuego");
+        Type fuego = new Type("Fuego");
         fuego.AddEffectiveness("Planta", 2.0);
         fuego.AddEffectiveness("Agua", 0.5);
         fuego.AddEffectiveness("Fuego", 1.0);

@@ -1,10 +1,12 @@
 ﻿using System.Security.Cryptography.X509Certificates;
+using Library;
 
-namespace Library;
+namespace Project2;
 
 public class Magikarp : PokemonBase
 {
     public Magikarp()
+        :base()
     {
         this.Name = "Magikarp";
         this.Lvl = 100;
@@ -19,6 +21,10 @@ public class Magikarp : PokemonBase
         {
             { 1, new Salpicadura() }, // Agregar ataque Salpicadura
             { 2, new Placaje() } // Agregar otro ataque
+        };
+        this.Types = new List<Type>()
+        {
+            {TypeTable.GetType("agua")}
         };
     }
 }

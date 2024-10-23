@@ -1,6 +1,8 @@
-namespace Library;
+using Library;
 
-public class PokemonBase
+namespace Project2;
+
+public class PokemonBase: IPokemon
 {
     private string name;
     private List<Type> types;
@@ -14,20 +16,20 @@ public class PokemonBase
     private int vel;
     private Dictionary<int, IAttack> attacks;
 
-    public string Name { get;  set;}
-    public List<Type> Types { get;  set;}
-    public int Lvl { get;  set;}
-    public double PSMax { get;  set;}
+    public string Name { get; set; }
+    public List<Type> Types { get; set; }
+    public int Lvl { get; set; }
+    public double PSMax { get; set; }
     public double PS { get; set; }
-    public int Atk { get;  set;}
-    public int Def { get;  set;}
-    public int SpDef { get;  set;}
-    public int SpAtk { get;  set;}
-    public int Vel { get;  set;}
+    public int Atk { get; set; }
+    public int Def { get; set; }
+    public int SpDef { get; set; }
+    public int SpAtk { get; set; }
+    public int Vel { get; set; }
     public Dictionary<int, IAttack> Attacks { get; set; }
 
 
-    public void UsarAtaque(IAttack attack, PokemonBase pokemon)
+    public void UsarAtaque(IAttack attack, IPokemon pokemon)
     {
         pokemon.RecibirDaño(DamageCalculator(attack, pokemon));
     }
@@ -44,7 +46,8 @@ public class PokemonBase
         }
 
     }
-    private double DamageCalculator(IAttack attack, PokemonBase pokemon)
+
+    private double DamageCalculator(IAttack attack, IPokemon objective)
     {
         double stab;
         if (this.Types.Contains(attack.Type))
@@ -59,23 +62,21 @@ public class PokemonBase
         Random rnd = new Random();
         int variacion = rnd.Next(85, 100);
         int pot = attack.Potency;
-        double effectiveness = TypeTable.GetEffectiveness(attack.Type, pokemon.Types);
+        double effectiveness = TypeTable.GetEffectiveness(attack.Type, objective.Types);
         double totaldaño;
         double dañostats;
 
         if (attack.TypeOfAttack == TypeAttack.Physical)
         {
-            dañostats = (((0.2 * this.Lvl + 1) * this.Atk * pot) / (25 * pokemon.Def)) + 2;
+            dañostats = (((0.2 * this.Lvl + 1) * this.Atk * pot) / (25 * objective.Def)) + 2;
             totaldaño = (0.01 * stab * (effectiveness) * variacion * dañostats);
         }
         else
         {
-            dañostats = (((0.2 * this.Lvl + 1) * this.SpAtk * pot) / (25 * pokemon.SpDef)) + 2;
+            dañostats = (((0.2 * this.Lvl + 1) * this.SpAtk * pot) / (25 * objective.SpDef)) + 2;
             totaldaño = (0.01 * stab * (effectiveness) * variacion * dañostats);
         }
 
         return totaldaño;
     }
-    
 }
-    

@@ -13,18 +13,22 @@ C:\Users\emanu\OneDrive\Documents\Programacion2\ProyectoP2\scr\Program\obj\Debug
 C:\Users\emanu\OneDrive\Documents\Programacion2\ProyectoP2\scr\Program\obj\Debug\net8.0\Program.pdb
 C:\Users\emanu\OneDrive\Documents\Programacion2\ProyectoP2\scr\Program\obj\Debug\net8.0\Program.genruntimeconfig.cache
 C:\Users\emanu\OneDrive\Documents\Programacion2\ProyectoP2\scr\Program\obj\Debug\net8.0\ref\Program.dll
-C:\Users\Jessica Mora\OneDrive\Escritorio\pii_2024_2_equipo7\scr\Program\bin\Debug\net8.0\Program.exe
-C:\Users\Jessica Mora\OneDrive\Escritorio\pii_2024_2_equipo7\scr\Program\bin\Debug\net8.0\Program.deps.json
-C:\Users\Jessica Mora\OneDrive\Escritorio\pii_2024_2_equipo7\scr\Program\bin\Debug\net8.0\Program.runtimeconfig.json
-C:\Users\Jessica Mora\OneDrive\Escritorio\pii_2024_2_equipo7\scr\Program\bin\Debug\net8.0\Program.dll
-C:\Users\Jessica Mora\OneDrive\Escritorio\pii_2024_2_equipo7\scr\Program\bin\Debug\net8.0\Program.pdb
-C:\Users\Jessica Mora\OneDrive\Escritorio\pii_2024_2_equipo7\scr\Program\obj\Debug\net8.0\Program.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Jessica Mora\OneDrive\Escritorio\pii_2024_2_equipo7\scr\Program\obj\Debug\net8.0\Program.AssemblyInfoInputs.cache
-C:\Users\Jessica Mora\OneDrive\Escritorio\pii_2024_2_equipo7\scr\Program\obj\Debug\net8.0\Program.AssemblyInfo.cs
-C:\Users\Jessica Mora\OneDrive\Escritorio\pii_2024_2_equipo7\scr\Program\obj\Debug\net8.0\Program.csproj.CoreCompileInputs.cache
-C:\Users\Jessica Mora\OneDrive\Escritorio\pii_2024_2_equipo7\scr\Program\obj\Debug\net8.0\Program.sourcelink.json
-C:\Users\Jessica Mora\OneDrive\Escritorio\pii_2024_2_equipo7\scr\Program\obj\Debug\net8.0\Program.dll
-C:\Users\Jessica Mora\OneDrive\Escritorio\pii_2024_2_equipo7\scr\Program\obj\Debug\net8.0\refint\Program.dll
-C:\Users\Jessica Mora\OneDrive\Escritorio\pii_2024_2_equipo7\scr\Program\obj\Debug\net8.0\Program.pdb
-C:\Users\Jessica Mora\OneDrive\Escritorio\pii_2024_2_equipo7\scr\Program\obj\Debug\net8.0\Program.genruntimeconfig.cache
-C:\Users\Jessica Mora\OneDrive\Escritorio\pii_2024_2_equipo7\scr\Program\obj\Debug\net8.0\ref\Program.dll
+C:\Users\emanu\OneDrive\Documents\Programacion2\pii_2024_2_equipo7\scr\Program\bin\Debug\net8.0\Program.exe
+C:\Users\emanu\OneDrive\Documents\Programacion2\pii_2024_2_equipo7\scr\Program\bin\Debug\net8.0\Program.deps.json
+C:\Users\emanu\OneDrive\Documents\Programacion2\pii_2024_2_equipo7\scr\Program\bin\Debug\net8.0\Program.runtimeconfig.json
+C:\Users\emanu\OneDrive\Documents\Programacion2\pii_2024_2_equipo7\scr\Program\bin\Debug\net8.0\Program.dll
+C:\Users\emanu\OneDrive\Documents\Programacion2\pii_2024_2_equipo7\scr\Program\bin\Debug\net8.0\Program.pdb
+C:\Users\emanu\OneDrive\Documents\Programacion2\pii_2024_2_equipo7\scr\Program\bin\Debug\net8.0\Library.dll
+C:\Users\emanu\OneDrive\Documents\Programacion2\pii_2024_2_equipo7\scr\Program\bin\Debug\net8.0\Library.pdb
+C:\Users\emanu\OneDrive\Documents\Programacion2\pii_2024_2_equipo7\scr\Program\obj\Debug\net8.0\Program.csproj.AssemblyReference.cache
+C:\Users\emanu\OneDrive\Documents\Programacion2\pii_2024_2_equipo7\scr\Program\obj\Debug\net8.0\Program.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\emanu\OneDrive\Documents\Programacion2\pii_2024_2_equipo7\scr\Program\obj\Debug\net8.0\Program.AssemblyInfoInputs.cache
+C:\Users\emanu\OneDrive\Documents\Programacion2\pii_2024_2_equipo7\scr\Program\obj\Debug\net8.0\Program.AssemblyInfo.cs
+C:\Users\emanu\OneDrive\Documents\Programacion2\pii_2024_2_equipo7\scr\Program\obj\Debug\net8.0\Program.csproj.CoreCompileInputs.cache
+C:\Users\emanu\OneDrive\Documents\Programacion2\pii_2024_2_equipo7\scr\Program\obj\Debug\net8.0\Program.sourcelink.json
+C:\Users\emanu\OneDrive\Documents\Programacion2\pii_2024_2_equipo7\scr\Program\obj\Debug\net8.0\Program.csproj.Up2Date
+C:\Users\emanu\OneDrive\Documents\Programacion2\pii_2024_2_equipo7\scr\Program\obj\Debug\net8.0\Program.dll
+C:\Users\emanu\OneDrive\Documents\Programacion2\pii_2024_2_equipo7\scr\Program\obj\Debug\net8.0\refint\Program.dll
+C:\Users\emanu\OneDrive\Documents\Programacion2\pii_2024_2_equipo7\scr\Program\obj\Debug\net8.0\Program.pdb
+C:\Users\emanu\OneDrive\Documents\Programacion2\pii_2024_2_equipo7\scr\Program\obj\Debug\net8.0\Program.genruntimeconfig.cache
+C:\Users\emanu\OneDrive\Documents\Programacion2\pii_2024_2_equipo7\scr\Program\obj\Debug\net8.0\ref\Program.dll

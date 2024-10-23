@@ -1,4 +1,4 @@
-namespace Library;
+namespace Project2;
 
 public enum TypeAttack
 {

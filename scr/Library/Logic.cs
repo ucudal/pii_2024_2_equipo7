@@ -1,6 +1,6 @@
 using System.Reflection.PortableExecutable;
 
-namespace Library;
+namespace Project2;
 
 public class Logic
 {
@@ -75,12 +75,18 @@ public class Logic
         }
         else if (input == 2)
         {
-            PreguntarPorCambio(jugador);
+            PreguntarPorPokemon(jugador);
             jugador.AccionElegida = posibleacciones[1]; // Agrega una acción de cambiar Pokémon
         }
-            
+        else if (input == 3)
+        {
+            PreguntarPorObjeto(jugador);
+            jugador.AccionElegida = posibleacciones[2];
+        }
         else
-            throw new ArgumentOutOfRangeException("Acción inválida. Debe ser 1 o 2.");
+        {
+            throw new ArgumentOutOfRangeException("Acción inválida");
+        }
     }
 
     public void EjecutarAcciones(Player primero, Player segundo)
@@ -91,13 +97,13 @@ public class Logic
         }
         else if (primero.AccionElegida.Name == "Cambiar")
         {
-            primero.CambiarPokemon(primero.pokemonelegido);
-            //primero.CambiarPokemon(primero.pokemonelegido);
-            Console.WriteLine($"{primero.Name} cambia de Pokémon.");
-            // Aquí iría la lógica para cambiar el Pokémon activo.
+            primero.CambiarPokemon(primero.PokemonElegido);
         }
-
-        // Similar para la acción 2
+        else if (primero.AccionElegida.Name == "Usar Objeto")
+        {
+            primero.UsarObjeto(primero.ObjetoElegido, primero.PokemonElegido);
+        }
+        
         if (segundo.AccionElegida.Name == "Atacar")
         {
             segundo.ActivePokemon.UsarAtaque(segundo.AtaqueElegido,primero.ActivePokemon);
@@ -105,8 +111,11 @@ public class Logic
         }
         else if (segundo.AccionElegida.Name == "Cambiar")
         {
-            Console.WriteLine($"{segundo.Name} cambia de Pokémon.");
-            // Lógica para cambiar el Pokémon activo.
+            segundo.CambiarPokemon(segundo.PokemonElegido);
+        }
+        else if (segundo.AccionElegida.Name == "Usar Objeto")
+        {
+            segundo.UsarObjeto(segundo.ObjetoElegido, primero.PokemonElegido);
         }
     }
 
@@ -115,26 +124,40 @@ public class Logic
         Console.WriteLine("Elige un ataque:");
         foreach (var variable in jugador.ActivePokemon.Attacks)
         {
-            Console.WriteLine($"{variable.Key + 1} - Nombre:{variable.Value.Name} - POT:{variable.Value.Potency} - ACC:{variable.Value.Accuracy}- Tipo:{variable.Value.TypeOfAttack}/{variable.Value.Accuracy} - EsEspecial{variable.Value.IsSpecial}");
+            Console.WriteLine($"{variable.Key} - Nombre:{variable.Value.Name} - POT:{variable.Value.Potency} - ACC:{variable.Value.Accuracy}- Tipo:{variable.Value.TypeOfAttack}/{variable.Value.Accuracy} - EsEspecial{variable.Value.IsSpecial}");
         }
-        IAttack ataqueelegido = jugador.ActivePokemon.Attacks[Convert.ToInt32(Console.ReadLine())-1];
+        jugador.AtaqueElegido = jugador.ActivePokemon.Attacks[Convert.ToInt32(Console.ReadLine())];
     }
 
-    private void PreguntarPorCambio(Player jugador)
+    private void PreguntarPorPokemon(Player jugador)
     {
         Console.WriteLine("Elige un pokemon:");
-        foreach (PokemonBase variable in jugador.PokemonsList)
+        int index = 1;
+        foreach (IPokemon variable in jugador.PokemonsList)
         {
-            Console.WriteLine($"{variable.Name}");
+            Console.WriteLine($"{index}-{variable.Name}");
+            index++;
         }
 
-        string eleccion = Console.ReadLine();
-        if (jugador.PokemonsList.Contains(eleccion))
+        int eleccion = Convert.ToInt32(Console.ReadLine());
+        jugador.PokemonElegido = jugador.PokemonsList[index - 1];
+}
+    
+    private void PreguntarPorObjeto(Player jugador)
+    {
+        Console.WriteLine("Elige un pokemon:");
+        int index = 1;
+        foreach (IItem variable in jugador.ItemList)
         {
-            PokemonBase pokemonelegido;
-            pokemonelegido = jugador.PokemonsList.Find(p => p.Name == Console.ReadLine());
+            Console.WriteLine($"{index}-{variable.Name}");
+            index++;
         }
+
+        int eleccion = Convert.ToInt32(Console.ReadLine());
+        jugador.ObjetoElegido = jugador.ItemList[index - 1];
+        PreguntarPorPokemon(jugador);
     }
+    
     public void DeclararGanador()
     {
         if (Jugador1.EstaVivo())
