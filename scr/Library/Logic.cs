@@ -92,6 +92,7 @@ public class Logic
         else if (primero.AccionElegida.Name == "Cambiar")
         {
             primero.CambiarPokemon(primero.pokemonelegido);
+            //primero.CambiarPokemon(primero.pokemonelegido);
             Console.WriteLine($"{primero.Name} cambia de Pokémon.");
             // Aquí iría la lógica para cambiar el Pokémon activo.
         }
@@ -122,15 +123,18 @@ public class Logic
     private void PreguntarPorCambio(Player jugador)
     {
         Console.WriteLine("Elige un pokemon:");
-        foreach (IPokemon variable in jugador.PokemonsList)
+        foreach (PokemonBase variable in jugador.PokemonsList)
         {
             Console.WriteLine($"{variable.Name}");
         }
 
         string eleccion = Console.ReadLine();
         if (jugador.PokemonsList.Contains(eleccion))
-        IPokemon pokemonelegido = jugador.PokemonsList.Find(p => p.Name == Console.ReadLine());
-}
+        {
+            PokemonBase pokemonelegido;
+            pokemonelegido = jugador.PokemonsList.Find(p => p.Name == Console.ReadLine());
+        }
+    }
     public void DeclararGanador()
     {
         if (Jugador1.EstaVivo())
