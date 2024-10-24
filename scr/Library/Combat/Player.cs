@@ -46,8 +46,6 @@ public class Player
         {
             this.ActivePokemon = pokemon;
         }
-
-        throw new Exception("No tienes este pokemon");
     }
 
     public bool EstaVivo()
@@ -71,7 +69,14 @@ public class Player
 
     public void UsarObjeto(IItem item, IPokemon pokemon)
     {
-        item.Effect(pokemon);
+        if (pokemon == this.ActivePokemon)
+        {
+            item.Effect(this.ActivePokemon);
+        }
+        else
+        {
+            item.Effect(pokemon);
+        }
         this.ItemList.Remove(item);
     }
 
@@ -79,7 +84,11 @@ public class Player
     {
         Name = nombre;
         PokemonsList = new List<IPokemon>();
-        ActivePokemon = null;
-        //Turno=
+        this.ItemList = new List<IItem>()
+        {
+            { new Super_Potion() }, // Agregar ataque Salpicadura
+            { new Revive() } // Agregar otro ataque
+        };
     }
+//Turno=
 }

@@ -47,7 +47,7 @@ public class PokemonBase: IPokemon
 
     }
 
-    private double DamageCalculator(IAttack attack, IPokemon objective)
+    public double DamageCalculator(IAttack attack, IPokemon objective)
     {
         double stab;
         if (this.Types.Contains(attack.Type))

@@ -19,7 +19,7 @@ public interface IPokemon
 
      void RecibirDaño(double Damage);
 
-     //double DamageCalculator(IAttack attack, PokemonBase pokemon);
+     double DamageCalculator(IAttack attack, IPokemon pokemon);
 
 }
     

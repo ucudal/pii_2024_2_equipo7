@@ -9,7 +9,11 @@ public class Revive : BaseItem
 
     public override void Effect(IPokemon objetive)
     {
-        objetive.PS = objetive.PSMax / 2;
+        if (objetive.PS == 0)
+        {
+            objetive.PS = objetive.PSMax;
+        }
+        else throw new Exception("Este pokemon no esta debilitado");
     }
 }
 

@@ -14,4 +14,3 @@ public class Total_cure : BaseItem
 }
 
 //Cura a un Pokémon de efectos de ataques especiales, dormido, paralizado, envenenado, o quemado.
-

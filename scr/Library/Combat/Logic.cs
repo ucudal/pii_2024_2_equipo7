@@ -1,5 +1,6 @@
 using System.Reflection.PortableExecutable;
 using System.Text;
+using Library;
 
 namespace Project2;
 
@@ -72,7 +73,7 @@ public class Logic
         }
         textotipos.Remove(textotipos.Length - 1, 1);
         
-        Console.WriteLine($"{jugador.Name}, elige tu acción: (1) Atacar (2) Cambiar Pokémon --- Pokemon Activo:{jugador.ActivePokemon.Name} - Tipo:{textotipos} - PS:{Math.Round(jugador.ActivePokemon.PS)}/{jugador.ActivePokemon.PSMax}");
+        Console.WriteLine($"{jugador.Name}, elige tu acción: (1) Atacar | (2) Cambiar Pokémon | (3) Usar Objeto --- Pokemon Activo:{jugador.ActivePokemon.Name} - Tipo:{textotipos} - PS:{Math.Round(jugador.ActivePokemon.PS)}/{jugador.ActivePokemon.PSMax}");
         int input = Convert.ToInt32(Console.ReadLine());
 
         // Aquí puedes definir las acciones con prioridad
@@ -102,6 +103,7 @@ public class Logic
         if (primero.AccionElegida.Name == "Atacar")
         {
             primero.ActivePokemon.UsarAtaque(primero.AtaqueElegido,segundo.ActivePokemon);
+            Console.WriteLine($"{primero.Name}: {primero.ActivePokemon.Name} utilizó {primero.AtaqueElegido} he hizo {Math.Round(primero.ActivePokemon.DamageCalculator(primero.AtaqueElegido,segundo.ActivePokemon))} de daño.");
         }
         else if (primero.AccionElegida.Name == "Cambiar")
         {
@@ -115,7 +117,7 @@ public class Logic
         if (segundo.AccionElegida.Name == "Atacar")
         {
             segundo.ActivePokemon.UsarAtaque(segundo.AtaqueElegido,primero.ActivePokemon);
-            Console.WriteLine($"{segundo.ActivePokemon.Name} realiza un ataque.");
+            Console.WriteLine($"{segundo.Name}: {segundo.ActivePokemon.Name} utilizó {segundo.AtaqueElegido} he hizo {Math.Round(segundo.ActivePokemon.DamageCalculator(segundo.AtaqueElegido,primero.ActivePokemon))} de daño.");
         }
         else if (segundo.AccionElegida.Name == "Cambiar")
         {
@@ -134,7 +136,8 @@ public class Logic
         {
             Console.WriteLine($"{variable.Key} - Nombre:{variable.Value.Name} - POT:{variable.Value.Potency} - ACC:{variable.Value.Accuracy}- Tipo:{variable.Value.TypeOfAttack}/{variable.Value.Type.Name} - EsEspecial = {variable.Value.IsSpecial}");
         }
-        jugador.AtaqueElegido = jugador.ActivePokemon.Attacks[Convert.ToInt32(Console.ReadLine())];
+        {jugador.AtaqueElegido = jugador.ActivePokemon.Attacks[Convert.ToInt32(Console.ReadLine())];}
+       
     }
 
     private void PreguntarPorPokemon(Player jugador)
@@ -149,11 +152,11 @@ public class Logic
 
         int eleccion = Convert.ToInt32(Console.ReadLine());
         jugador.PokemonElegido = jugador.PokemonsList[eleccion - 1];
-}
+    }
     
     private void PreguntarPorObjeto(Player jugador)
     {
-        Console.WriteLine("Elige un pokemon:");
+        Console.WriteLine("Elige un objeto:");
         int index = 1;
         foreach (IItem variable in jugador.ItemList)
         {
@@ -162,7 +165,7 @@ public class Logic
         }
 
         int eleccion = Convert.ToInt32(Console.ReadLine());
-        jugador.ObjetoElegido = jugador.ItemList[index - 1];
+        jugador.ObjetoElegido = jugador.ItemList[eleccion - 1];
         PreguntarPorPokemon(jugador);
     }
     
