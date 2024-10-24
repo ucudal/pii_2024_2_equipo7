@@ -1,4 +1,5 @@
 using System.Reflection.PortableExecutable;
+using System.Text;
 
 namespace Project2;
 
@@ -64,7 +65,14 @@ public class Logic
 
     public void PedirAccion(Player jugador) // Cambié el tipo de retorno a 'Action'
     {
-        Console.WriteLine($"{jugador.Name}, elige tu acción: (1) Atacar (2) Cambiar Pokémon");
+        StringBuilder textotipos = new StringBuilder();
+        foreach (var tipos in jugador.ActivePokemon.Types)
+        {
+             textotipos.Append($"{tipos.Name}/");
+        }
+        textotipos.Remove(textotipos.Length - 1, 1);
+        
+        Console.WriteLine($"{jugador.Name}, elige tu acción: (1) Atacar (2) Cambiar Pokémon --- Pokemon Activo:{jugador.ActivePokemon.Name} - Tipo:{textotipos} - PS:{Math.Round(jugador.ActivePokemon.PS)}/{jugador.ActivePokemon.PSMax}");
         int input = Convert.ToInt32(Console.ReadLine());
 
         // Aquí puedes definir las acciones con prioridad
@@ -124,7 +132,7 @@ public class Logic
         Console.WriteLine("Elige un ataque:");
         foreach (var variable in jugador.ActivePokemon.Attacks)
         {
-            Console.WriteLine($"{variable.Key} - Nombre:{variable.Value.Name} - POT:{variable.Value.Potency} - ACC:{variable.Value.Accuracy}- Tipo:{variable.Value.TypeOfAttack}/{variable.Value.Accuracy} - EsEspecial{variable.Value.IsSpecial}");
+            Console.WriteLine($"{variable.Key} - Nombre:{variable.Value.Name} - POT:{variable.Value.Potency} - ACC:{variable.Value.Accuracy}- Tipo:{variable.Value.TypeOfAttack}/{variable.Value.Type.Name} - EsEspecial = {variable.Value.IsSpecial}");
         }
         jugador.AtaqueElegido = jugador.ActivePokemon.Attacks[Convert.ToInt32(Console.ReadLine())];
     }
@@ -140,7 +148,7 @@ public class Logic
         }
 
         int eleccion = Convert.ToInt32(Console.ReadLine());
-        jugador.PokemonElegido = jugador.PokemonsList[index - 1];
+        jugador.PokemonElegido = jugador.PokemonsList[eleccion - 1];
 }
     
     private void PreguntarPorObjeto(Player jugador)

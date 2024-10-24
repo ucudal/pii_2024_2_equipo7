@@ -40,7 +40,7 @@ public class Player
     public IPokemon PokemonElegido { get; set; }
     
 
-    public void CambiarPokemon(IPokemon pokemon)
+    public void CambiarPokemon(IPokemon pokemon)        //hay que poner que tenga que tener vida y alguna excepcion
     {
         if (this.pokemonsList.Contains(pokemon))
         {
